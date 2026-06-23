@@ -1,0 +1,132 @@
+@import url("style/header.css");
+@import url("style/banner.css");
+@import url("style/carrossel.css");
+@import url("style/topicos.css");
+@import url("style/contato.css");
+@import url("style/rodape.css");
+
+@property --cor--fundo-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ebecee;
+}
+
+@property --cor--fundo-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #e6c7c7;
+}
+
+@property --cor--teste-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #002f52ea;
+}
+
+@property --cor--teste-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #326589ea;
+}
+
+:root {
+  --cor--branco--opaco: #ffffff85;
+  --cor--branco: #ffffff;
+  --cor--preto: #000000;
+  --cor--cinza: #474646;
+  --cor--cinza-claro: #858585;
+  --cor--destaque: #eb9b00;
+  --cor--azul: #002f52;
+  --fonte--principal: "Poppins";
+  --fonte--secundaria: "Josefin Sans";
+  --icon-tema: url("../img/Sol.svg");
+  --icon-logo: url("../img/Logo.svg");
+  --icon-menu: url("../img/Menu.svg");
+  --icon-menu-aberto: url("../img/MenuAberto.svg");
+  --opacidade: 0;
+  --sombreado: #01080e85;
+}
+
+* {
+  transition: all 1s ease;
+}
+
+body {
+  position: relative;
+  background: repeating-linear-gradient(
+    to right,
+    var(--cor--fundo-1) 5%,
+    var(--cor--fundo-2) 5% 20%,
+    var(--cor--fundo-1) 20% 25%,
+    var(--cor--fundo-2) 25%
+  );
+  font-family: var(--fonte--principal);
+  font-size: 16px;
+  font-weight: 400;
+  transition:
+    --cor--fundo-1 1s ease,
+    --cor--fundo-2 1s ease;
+}
+
+.dark-mode {
+  --cor--fundo-1: #3f3f44;
+  --cor--fundo-2: #240606;
+  --cor--teste-1: #011729ea;
+  --cor--teste-2: #172e3fea;
+  --cor--branco--opaco: #3a3a3acb;
+  --cor--branco: #a1a0a0;
+  --cor--preto: #a1a0a0;
+  --cor--cinza-claro: #929292;
+  --cor--cinza: #858585;
+  --cor--destaque: #122b26;
+  --cor--azul: #011a2e;
+  --icon-tema: url("../img/Lua.svg");
+  --icon-logo: url("../img/LogoEscura.svg");
+  --opacidade: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background: repeating-linear-gradient(
+      to right,
+      var(--cor--fundo-1) 3%,
+      var(--cor--fundo-2) 3% 15%,
+      var(--cor--fundo-1) 15% 18%,
+      var(--cor--fundo-2) 18%
+    );
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  body {
+    background: repeating-linear-gradient(
+      to right,
+      var(--cor--fundo-1) 0% 5%,
+      var(--cor--fundo-2) 5% 11%,
+      var(--cor--fundo-1) 11% 12%,
+      var(--cor--fundo-2) 12% 18%,
+      var(--cor--fundo-1) 18% 19%,
+      var(--cor--fundo-2) 19% 25%,
+      var(--cor--fundo-1) 25% 26%,
+      var(--cor--fundo-2) 26% 32%,
+      var(--cor--fundo-1) 32% 33%,
+      var(--cor--fundo-2) 33% 39%,
+      var(--cor--fundo-1) 39% 40%,
+      var(--cor--fundo-2) 40% 46%,
+      var(--cor--fundo-1) 46% 47%,
+      var(--cor--fundo-2) 47% 53%,
+      var(--cor--fundo-1) 53% 54%,
+      var(--cor--fundo-2) 54% 60%,
+      var(--cor--fundo-1) 60% 61%,
+      var(--cor--fundo-2) 61% 67%,
+      var(--cor--fundo-1) 67% 68%,
+      var(--cor--fundo-2) 68% 74%,
+      var(--cor--fundo-1) 74% 75%,
+      var(--cor--fundo-2) 75% 81%,
+      var(--cor--fundo-1) 81% 82%,
+      var(--cor--fundo-2) 82% 88%,
+      var(--cor--fundo-1) 88% 89%,
+      var(--cor--fundo-2) 89% 95%
+    );
+  }
+}
